@@ -5,6 +5,7 @@ import Face2 from '../img/face2.jpg'
 import Face4 from '../img/face4.jpg'
 
 
+
 export default class Chatsite extends Component {
 render() {
 return (
@@ -18,7 +19,7 @@ return (
             <div id="profile">
                 <div className="wrap">
                     <img id="profile-img" src={Face} className="status-online" alt="" />
-                    <p>Sommer</p>
+                    <p className="name">Sommer</p>
 
                     <div id="status-muligheder">
                         <ul>
@@ -145,7 +146,7 @@ return (
 
             <div className="content-profile">
                 <img src={Face4} alt="" />
-                <p>Face4</p>
+                <p>Two face</p>
             </div>
 
             <div className="messages">
