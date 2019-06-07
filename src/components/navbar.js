@@ -18,10 +18,10 @@ return (
     {/* <img className="logo" src={Logo} alt=""/> */}
         <ul className="ul"> 
    
-            <li className="li"> <Link To="/">Home</Link></li>
-            <li className="li"> <Link To="/chat">Chat</Link></li>
+            <li className="li"> <Link to="/">Home</Link></li>
+            <li className="li"> <Link to="/chat">Chat</Link></li>
             <li className="li"> <LoginOpret/> </li>
-            <li className="li"> <Link To="/founder">Founder</Link></li>
+            <li className="li"> <Link to="/founder">Founder</Link></li>
         </ul>
     </nav>
 
