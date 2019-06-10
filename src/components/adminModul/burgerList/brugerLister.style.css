@@ -24,7 +24,7 @@
     width: 100%;
     border: solid 1px;
     max-height: 730px;
-    
+    overflow-y : auto;
   }
   
   .dropbtn {
@@ -42,36 +42,7 @@
     width: 100%;
   }
   
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    width: 100%;
-    cursor: pointer;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-bottom: solid 1px
-  }
-  
-  .dropdown-content a:hover {
-    background-color: white
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropbtn:hover {
-    background-color: rgb(14, 42, 102);
-  }
+
   
   /* Brugere */
   
@@ -88,8 +59,37 @@
     width: 100%;
   }
   
+  thead tr {
+    background-color: rgb(177, 172, 204);
+  }
+  
+
+  tbody tr:hover {
+  background-color: rgb(216, 216, 216);
+  }
+
+   
   th,
   td {
     padding: 18px;
   }
+
   
+
+  .online {
+    margin: 0 auto;
+    width:20px;
+    height:20px;
+    background-color: rgb(61, 187, 61);
+    border-radius: 100%;
+  }
+
+  
+  .offline {
+    margin: 0 auto;
+    width:20px;
+    height:20px;
+    border-radius: 100%;
+    background-color: rgb(230, 230, 230);
+  }
+
