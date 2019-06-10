@@ -15,23 +15,26 @@ return (
                 <Link to="/onlineBrugere">Online brugere</Link>
                 <Link to="/adminBrugere">Admin brugere</Link>
                 <Link to="/timeoutBrugere">Timeout brugere</Link>
+                <Link to="/bannedBrugere">Banned brugere</Link>
             </div>
         </div>
         <table>
+
             <tr className="tr">
                 <td className="td">Bruger</td>
-                <td className="td">Status</td>
+                <td className="td">Type</td>
                 <td className="td">Farve</td>
             </tr>
+            
             <tr className="tr">
                 <td className="td">Bruger</td>
-                <td className="td">Status</td>
+                <td className="td">Type</td>
                 <td className="td">Farve</td>
             </tr>
 
             <tr className="tr">
                 <td className="td">Bruger</td>
-                <td className="td">Status</td>
+                <td className="td">Type</td>
                 <td className="td">Farve</td>
             </tr>
 

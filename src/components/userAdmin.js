@@ -9,7 +9,9 @@ export default class UserAdmin extends Component {
     render() {
         return (
             <div className="founder">
-            <Sitebar/> 
+
+            <Sitebar/>
+             
             <BrugerLister/> 
             <Profil/>
             <OpretNyBruger/>

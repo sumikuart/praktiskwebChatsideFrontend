@@ -21,7 +21,7 @@ return (
             <li className="li"> <Link to="/">Home</Link></li>
             <li className="li"> <Link to="/chat">Chat</Link></li>
             <li className="li"> <LoginOpret/> </li>
-            <li className="li"> <Link to="/founder">Founder</Link></li>
+            <li className="li"> <Link to="/founder/useradmin">Founder</Link></li>
         </ul>
     </nav>
 

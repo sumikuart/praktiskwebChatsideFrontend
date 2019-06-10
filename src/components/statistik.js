@@ -9,6 +9,7 @@ export default class Statistik extends Component {
 
              <Sitebar/> 
             
+            <h2>statistik</h2>
             </div>
         )
     }
