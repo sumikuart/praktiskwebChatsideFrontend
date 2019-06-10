@@ -8,12 +8,13 @@ return (
 <Router>
     <div className="brugerlister">
 
+{/* ready to go!! */}
         
     <input className="søg" type="text" placeholder="Søg Bruger" />
         <button className="søgsubmit" type="submit">Søg</button>
 
         <div className="dropdown">
-            <div className="dropbtn">Bruger info</div>
+            <div className="dropbtn">Bruger info hej</div>
             <div className="dropdown-content">
                 <Link to="/alleBrugere">Alle brugere</Link>
                 <Link to="/onlineBrugere">Online brugere</Link>
