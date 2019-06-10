@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import BrugerLister from './brugerLister';
-import Profil from './profil'
-import Sitebar from './sitebar';
-import OpretNyBruger from './opretNyBruger'
-import '../App.css';
+import BrugerLister from '../burgerList/brugerLister';
+import Profil from '../profil/profil'
+import Sitebar from '../sitebar/sitebar';
+import OpretNyBruger from '../opretbruger/opretNyBruger'
+import './userAdmin.style.css';
 export default class UserAdmin extends Component {
 
     render() {

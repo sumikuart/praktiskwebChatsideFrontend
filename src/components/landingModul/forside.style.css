@@ -1,0 +1,13 @@
+/* forside */
+.textbox {
+    width: 25%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 15% 0% 0% 10%
+  }
+  
+  h3 {
+    color: rgb(109, 109, 109);
+    margin: 10px 0 0 0
+  }
+  

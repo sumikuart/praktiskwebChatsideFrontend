@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import './profil.style.css';
+
 
 export default class Profil extends Component {
 render() {

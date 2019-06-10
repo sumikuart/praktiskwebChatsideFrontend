@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import Sitebar from './sitebar';
-import '../App.css';
 
-export default class Statistik extends Component {
+import './founder.style.css';
+
+export default class Founder extends Component {
     render() {
         return (
-            <div className="statistik">
-
+            <div className="founder">
              <Sitebar/> 
-            
-            <h2>statistik</h2>
+      
             </div>
         )
     }
 }
+

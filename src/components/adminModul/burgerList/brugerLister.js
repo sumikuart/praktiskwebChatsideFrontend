@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import '../App.css';
+import './brugerLister.style.css';
 
 export default class BrugerLister extends Component {
 render() {
 return (
 <Router>
     <div className="brugerlister">
+
+        
+    <input className="søg" type="text" placeholder="Søg Bruger" />
+        <button className="søgsubmit" type="submit">Søg</button>
 
         <div className="dropdown">
             <div className="dropbtn">Bruger info</div>
