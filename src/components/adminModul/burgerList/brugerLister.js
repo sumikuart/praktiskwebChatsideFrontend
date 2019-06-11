@@ -5,11 +5,11 @@ import './brugerLister.style.css';
 
 
 
-const MapUsers = props => (
+const MapUsers = (props) => (
 
     <tr>
-        <td> {props.currentUser.user_name} </td>
-        <td> {props.currentUser.user_type} </td>
+        <td> <Link to={"/founder/useradmin/"+props.currentUser._id}> {props.currentUser.user_name} </Link> </td>
+        <td > {props.currentUser.user_type} </td>
         <td> <div className={props.currentUser.user_online ? 'online' : 'offline'}></div>  </td>
     </tr>
 
@@ -100,9 +100,12 @@ onSubmit = (e) => {
 
 }
 
-printUserList =(e) => {
-    return this.state.users.map(function(currentItem, i){
-        return <MapUsers currentUser={currentItem} key={i} />
+printUserList = (e) => {
+
+
+    return this.state.users.reverse().map(function(currentItem, i){
+        return <MapUsers currentUser={currentItem} key={i}/>
+
     });
 }
 
@@ -145,7 +148,9 @@ return (
           
         </thead>
 
-            <tbody>
+
+{/* Jeg tror problemet ligger i at den ændre før den når ind i printerUserList */}
+            <tbody onClick={this.props.change_user_id}>
                 {this.printUserList()}
             </tbody>
 

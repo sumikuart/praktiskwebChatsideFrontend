@@ -64,6 +64,11 @@
   }
   
 
+  
+  tbody a { 
+  display: block;
+  }
+
   tbody tr:hover {
   background-color: rgb(216, 216, 216);
   }

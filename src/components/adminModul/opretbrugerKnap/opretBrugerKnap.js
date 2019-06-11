@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
-import './opretNyBruger.style.css';
+import {Link} from "react-router-dom";
+
+import './opretBrugerknap.style.css';
 
 export default class OpretNyBruger extends Component {
     render() {
         return (
             <div className="opretnybruger">
-                <button>Opret nu bruger</button>
+                
+                
+                <Link to="/founder/creatuser"> <button>Opret nu bruger</button> </Link>
             </div>
         )
     }
