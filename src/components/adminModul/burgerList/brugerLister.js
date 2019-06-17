@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link, NavLink } from "react-router-dom";
 import axios from 'axios'
 import './brugerLister.style.css';
 
 
 
-const MapUsers = (props) => (
+const MapUsers = (props) => {
 
-    <tr>
-        <td> <Link to={"/founder/useradmin/"+props.currentUser._id}> {props.currentUser.user_name} </Link> </td>
-        <td > {props.currentUser.user_type} </td>
-        <td> <div className={props.currentUser.user_online ? 'online' : 'offline'}></div>  </td>
-    </tr>
+    return(
+            <tr>
+            <td> <NavLink to={"/founder/useradmin/"+props.currentUser._id}> {props.currentUser.user_name} </NavLink> </td>
+            <td > {props.currentUser.user_type} </td>
+            <td> <div className={props.currentUser.user_online ? 'online' : 'offline'}></div>  </td>
+        </tr>
+    )
 
-)
+
+}
 
 export default class BrugerLister extends Component {
 
@@ -21,6 +24,7 @@ export default class BrugerLister extends Component {
     state = {
 
         userTypeSearch: 'allusers',
+        searchUserName: '',
         users: []
     }
 
@@ -102,23 +106,46 @@ onSubmit = (e) => {
 
 printUserList = (e) => {
 
-
-    return this.state.users.reverse().map(function(currentItem, i){
+    return this.state.users.map(function(currentItem, i){
         return <MapUsers currentUser={currentItem} key={i}/>
 
     });
 }
 
+changeSearchUser = (e) => {
+
+    this.setState({
+        searchUserName:e.target.value
+    })
+
+}
+
+searchForUser = (e) =>{
+    e.preventDefault();
+
+    console.log(this.state.searchUserName)
+    
+    axios.get('http://localhost:4040/search/'+this.state.searchUserName)
+    .then(response => {
+        this.setState({
+            users: response.data   
+        })
+    })
+}
 
 render() {
 return (
 <Router>
     <div className="brugerlister">
 
-         <input className="søg" type="text" placeholder="Søg Bruger" />
-        <button className="søgsubmit" type="submit">Søg</button>
+        <form onSubmit={this.searchForUser}>
+            <input className="søg" type="text" placeholder="Søg Bruger" onChange={this.changeSearchUser} />
+            <input className="søgsubmit" type="submit"  value="søg" />
+        </form>
 
         <div className="dropdown">
+
+
             <div className="dropbtn">Bruger info
 
             <form onSubmit={this.onSubmit}>
@@ -132,6 +159,8 @@ return (
                 </select>  
                 <button type="submit"> søg </button>
             </form>
+
+
             </div>
 
         </div>
@@ -143,13 +172,10 @@ return (
                 <th className="td">Bruger Navn:</th>
                 <th className="td">Type:</th>
                 <th className="td">Status:</th>
-
             </tr>
           
         </thead>
 
-
-{/* Jeg tror problemet ligger i at den ændre før den når ind i printerUserList */}
             <tbody onClick={this.props.change_user_id}>
                 {this.printUserList()}
             </tbody>
@@ -161,3 +187,5 @@ return (
 )
 }
 }
+
+// onClick={this.props.change_user_id}

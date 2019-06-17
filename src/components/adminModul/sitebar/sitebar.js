@@ -14,13 +14,18 @@ return (
 
         <ul id="sul">
             <li id="sli">
-                <Link to="/founder/useradmin">Bruger Admin</Link>
+                <Link to="/founder/useradmin/5cffb52d1fef910338caebef">Bruger Admin</Link>
             </li>
             <li id="sli1">
                 <Link to="/founder/statistik">Statistik </Link>
             </li>
+            <li id="sli1">
+                <Link to="/founder/creatuser">Opret Bruger </Link>
+            </li>
 
         </ul>
+
+            
 
     </nav>
 

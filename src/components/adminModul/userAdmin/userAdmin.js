@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import BrugerLister from '../burgerList/brugerLister';
 import Profil from '../profil/profil'
 import Sitebar from '../sitebar/sitebar';
-import OpretNyBruger from '../opretbrugerKnap/opretBrugerKnap'
 import './userAdmin.style.css';
 
 
@@ -20,8 +19,7 @@ export default class UserAdmin extends Component {
         user_verified: '',
         user_online: '',
 
-
-        user_id:''
+        user_id: this.props.match.params.id
     }
 
     componentDidMount(){
@@ -30,16 +28,24 @@ export default class UserAdmin extends Component {
     }
 
     componentDidUpdate(){
+
         console.log('Updateted: ',this.state.user_id )
+        console.log('Updateted 2: ',this.props.match.params.id )
+
     }
 
 
     user_id_change = (e) => {
+
+
+        // PROBLEMET MED AT VISE DEN VALGTE BRUGER LIGGER HER: DEN BLIVER VED MED AT FÅ TILDELT DEN ORGINALE URL OG IKKE DEN AKTUELLE URL
         this.setState({
-          user_id: this.props.match.params.id
+          user_id:this.props.match.params.id
         })
 
+        console.log(this.props.match)
         console.log('parameter: ', this.props.match.params.id)
+        console.log('user_id: ', this.state.user_id)
     }
 
     render() {
@@ -48,9 +54,9 @@ export default class UserAdmin extends Component {
 
             <Sitebar/>
              
-            <BrugerLister change_user_id={this.user_id_change}/> 
-            <Profil value={this.state.user_id}/>
-            <OpretNyBruger/>
+            <BrugerLister change_user_id={this.user_id_change} value={this.state.user_id} /> 
+            <Profil value={this.state.user_id} change_user_id={this.user_id_change} />
+
 
         
             </div>

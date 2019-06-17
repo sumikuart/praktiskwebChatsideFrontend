@@ -27,6 +27,8 @@
     overflow-y : auto;
   }
   
+  
+
   .dropbtn {
     background-color: rgb(60, 60, 98);
     color: white;
@@ -98,3 +100,10 @@
     background-color: rgb(230, 230, 230);
   }
 
+.brugerlister .active{
+  box-sizing: border-box;
+  background-color: black;
+  color:white;
+  padding:5px;
+  border-radius: 30%;
+}
