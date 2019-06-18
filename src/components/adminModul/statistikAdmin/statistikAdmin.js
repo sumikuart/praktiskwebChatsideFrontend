@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Sitebar from './sitebar';
-import '../App.css';
+import Sitebar from '../sitebar/sitebar';
+import './statistik.style.css';
 
 export default class Statistik extends Component {
     render() {
@@ -9,6 +9,7 @@ export default class Statistik extends Component {
 
              <Sitebar/> 
             
+            <h2>statistik</h2>
             </div>
         )
     }

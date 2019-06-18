@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import Baggrundchat from '../img/baggrundchat.png'
-import Face from '../img/face.jpg'
-import Face2 from '../img/face2.jpg'
-import Face4 from '../img/face4.jpg'
+import './chat.style.css'
+import Baggrundchat from './assets/baggrundchat.png'
+import Face from './assets/face.jpg'
+import Face2 from './assets/face2.jpg'
+import Face4 from './assets/face4.jpg'
 
 
+// Denne her skal deles op i flere moduler. og lave samme mappe stuktur som i admin Modulet
+// Kim
 
 export default class Chatsite extends Component {
 render() {

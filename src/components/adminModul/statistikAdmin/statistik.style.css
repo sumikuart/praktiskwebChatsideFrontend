@@ -1,0 +1,10 @@
+/* Statistik-grid */
+
+.statistik {
+    display: grid;
+    grid-template-columns: 20% 30% 40%;
+    grid-gap: 3.5%;
+    height: 800px;
+    overflow: hidden;
+  }
+  

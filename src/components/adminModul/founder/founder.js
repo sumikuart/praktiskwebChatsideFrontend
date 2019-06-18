@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Sitebar from './sitebar';
 
-import '../App.css';
+import './founder.style.css';
 
 export default class Founder extends Component {
     render() {

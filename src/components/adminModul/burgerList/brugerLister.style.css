@@ -1,0 +1,109 @@
+/* søg */
+
+.søg {
+    width: 80%;
+    height: 20px;
+    margin: 1% 0% 0% 3%;
+    font-size: 15px;
+    padding: 1%;
+    
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+  
+  .søgsubmit {
+    margin: 0px 0px 0px 0px;
+    padding: 1.5%;
+    font-size: 15px
+  }
+
+
+  /* BrugerLister */
+
+.brugerlister {
+    width: 100%;
+    border: solid 1px;
+    max-height: 730px;
+    overflow-y : auto;
+  }
+  
+  
+
+  .dropbtn {
+    background-color: rgb(60, 60, 98);
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+
+  
+  /* Brugere */
+  
+  
+  table,
+  td,
+  th {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  thead tr {
+    background-color: rgb(177, 172, 204);
+  }
+  
+
+  
+  tbody a { 
+  display: block;
+  }
+
+  tbody tr:hover {
+  background-color: rgb(216, 216, 216);
+  }
+
+   
+  th,
+  td {
+    padding: 18px;
+  }
+
+  
+
+  .online {
+    margin: 0 auto;
+    width:20px;
+    height:20px;
+    background-color: rgb(61, 187, 61);
+    border-radius: 100%;
+  }
+
+  
+  .offline {
+    margin: 0 auto;
+    width:20px;
+    height:20px;
+    border-radius: 100%;
+    background-color: rgb(230, 230, 230);
+  }
+
+.brugerlister .active{
+  box-sizing: border-box;
+  background-color: black;
+  color:white;
+  padding:5px;
+  border-radius: 30%;
+}

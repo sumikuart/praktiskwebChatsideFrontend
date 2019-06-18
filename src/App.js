@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route} from "react-router-dom";
-// import Navbar from './components/navbar';
-// import Forside from './components/forside'
-import Statistik from './components/statistik'
-import UserAdmin from './components/userAdmin'
-import Chatsite from './components/chatsite'
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Navbar from './components/navbar/navbar';
+import Forside from './components/landingModul/forside'
+import Statistik from './components/adminModul/statistikAdmin/statistikAdmin'
+import UserAdmin from './components/adminModul/userAdmin/userAdmin'
+import CreatUserFromAdmin from './components/adminModul/creatUserAdmin/creatUserAdmin'
+import Chatsite from './components/chatModul/chatsite'
 
 import './App.css';
 
@@ -17,14 +18,18 @@ render() {
 return (
 <Router>
   
-  {/* <Navbar />
-  <Forside /> */}
-  <Chatsite/>
+  <Navbar />
+  {/* <Forside />  */}
+  {/* <Chatsite/> */}
 
-  <Route exact path="/founder/useradmin" component={UserAdmin} />
-  <Route exact path="/founder/statistik" component={Statistik} />
-  <Route exact path="/statistik" component={Statistik} />
-
+  <Switch>
+    <Route exact path="/" component={Forside} />
+    <Route path="/founder/useradmin/:id" component={UserAdmin}/>
+    <Route exact path="/founder/statistik" component={Statistik} />
+    <Route exact path="/founder/creatuser" component={CreatUserFromAdmin} />
+    <Route exact path="/statistik" component={Statistik} />
+  </Switch>
+  
 </Router>
 )
 }

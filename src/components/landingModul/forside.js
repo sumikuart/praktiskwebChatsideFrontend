@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
-import LoginOpret from './loginOpret';
-import Logo from '../img/logo.png'
-import Baggrund from '../img/baggrund.png'
+import publicLoginModul from '../brugerModul/login/login';
+import Logo from './assets/logo.png'
+import Baggrund from './assets/baggrund.png'
+
+
+import './forside.style.css';
 
 export default class Forside extends Component {
 render() {
 return (
 <div>
 
-    <LoginOpret />
+    <publicLoginModul />
     <img className="bag" src={Baggrund} alt=""/> 
     <img className="logo" src={Logo} alt="" />
 
