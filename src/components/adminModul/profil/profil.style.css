@@ -9,7 +9,7 @@
 
 .profil {
   overflow-y: auto;
-  height: 720px;
+  height: 732px;
   border: solid 1px;
 
 }
@@ -154,7 +154,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
+.selecthojre{font-size: 15px}
 .profil .ProfilConfirmBox .closebox {
   width: 60px;
   text-align: center;

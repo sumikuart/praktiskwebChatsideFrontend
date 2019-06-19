@@ -300,7 +300,7 @@ return (
             <div className="extraInfoDiv">
                 <div>
                     <label>Type</label>
-                    <select  onChange={this.onChangeUserType} value={this.state.user_type}> 
+                    <select className="selecthojre"  onChange={this.onChangeUserType} value={this.state.user_type}> 
                         <option value="user"> User </option>
                         <option value="admin" > Admin </option>
                         <option value="founder" > Founder </option>

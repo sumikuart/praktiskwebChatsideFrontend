@@ -149,7 +149,7 @@ return (
             <div className="dropbtn">Bruger info
 
             <form className="formbrugerliste" onSubmit={this.onSubmit}>
-                <select onChange={this.onChangeUserSearchType}> 
+                <select className="selectvenstre" onChange={this.onChangeUserSearchType}> 
                     <option value="allusers"> Alle Bruger </option>
                     <option value="onlineusers" > Online Bruger </option>
                     <option value="Adminusers" > Admin Bruger </option>

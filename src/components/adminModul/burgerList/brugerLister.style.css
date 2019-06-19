@@ -22,7 +22,7 @@
 .brugerlister {
   width: 100%;
   border: solid 1px;
-  max-height: 730px;
+  max-height: 733.2px;
   overflow-y: auto;
 }
 
@@ -68,7 +68,7 @@ tbody tr:hover {
   background-color: rgb(216, 216, 216);
 }
 
-
+.selectvenstre{font-size: 16px}
 .online {
   margin: 0 auto;
   width: 20px;
