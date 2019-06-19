@@ -171,7 +171,7 @@ startHandelGodkend = (e) =>{
     if(this.state.user_verified){
         this.setState({
             confirm_hide:true,
-            confirm_name: 'Fjern godkendelse'
+            confirm_name: 'fjerne godkendelse'
     
         })
     } else {
@@ -199,7 +199,7 @@ startHandelBan = (e) =>{
     } else {
         this.setState({
             confirm_hide:true,
-            confirm_name: 'Ban'
+            confirm_name: 'banned'
     
         })
 
@@ -214,7 +214,7 @@ startHandelSlet = (e) =>{
 
         this.setState({
             confirm_hide:true,
-            confirm_name: 'Slet'
+            confirm_name: 'slette'
     })
 }
 
@@ -287,13 +287,13 @@ return (
             </div>
 
             <div>
-                <label>Email</label>
+                <label>Email </label>
                 <input value={this.state.user_mail} onChange={this.onChangeMail}/>
             </div>
 
 
             <div>
-                <label>Password</label>
+                <label>Kodeord </label>
                 <input value={this.state.user_password} onChange={this.onChangeCode}/>
             </div>
 
@@ -308,14 +308,14 @@ return (
                 </div>
 
                 <div>
-                    <label>godkendt:</label>
+                    <label>Godkendt:</label>
                       <div className={this.state.user_verified ? 'acceptedUser' : 'notAcceptedUser'}></div>
                 </div>
 
                 
                 <div>
                     <label>Timeout:</label>
-              <div>Null</div>
+              <div>Ingen</div>
                 </div>
 
                 <div>
@@ -373,7 +373,7 @@ return (
                 <p>X</p>
             </div>
 
-            <p>Du Skal til at <span>{this.state.confirm_name} </span> en bruger. ved navn: </p>
+            <p>Du skal til at <span>{this.state.confirm_name} </span> brugeren: </p>
             
             <p><span>{this.state.user_name}</span></p>
             <p>Vil du fortsætte?</p>
