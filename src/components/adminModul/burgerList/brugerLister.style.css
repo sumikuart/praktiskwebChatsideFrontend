@@ -6,14 +6,13 @@
     margin: 1% 0% 0% 3%;
     font-size: 15px;
     padding: 1%;
-    
     margin-top:10px;
     margin-bottom: 10px;
   }
   
   .søgsubmit {
     margin: 0px 0px 0px 0px;
-    padding: 1.5%;
+    padding: 1.1%;
     font-size: 15px
   }
 
@@ -32,10 +31,11 @@
   .dropbtn {
     background-color: rgb(60, 60, 98);
     color: white;
-    padding: 20px;
+    padding: 20px 0;
     font-size: 18px;
     text-align: center;
     border: none;
+    width: 100%;
   }
   
   .dropdown {
@@ -48,21 +48,21 @@
   
   /* Brugere */
   
-  
-  table,
-  td,
-  th {
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-  }
-  
   table {
     border-collapse: collapse;
     width: 100%;
   }
+  table,
+  td,
+  th {
+    text-align: center;padding: 18px
+  }
+  
+ 
   
   thead tr {
     background-color: rgb(177, 172, 204);
+  
   }
   
 
@@ -74,13 +74,6 @@
   tbody tr:hover {
   background-color: rgb(216, 216, 216);
   }
-
-   
-  th,
-  td {
-    padding: 18px;
-  }
-
   
 
   .online {
@@ -101,9 +94,7 @@
   }
 
 .brugerlister .active{
-  box-sizing: border-box;
   background-color: black;
   color:white;
   padding:5px;
-  border-radius: 30%;
 }

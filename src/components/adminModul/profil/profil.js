@@ -275,7 +275,7 @@ return (
         <h4>Brugerprofil </h4>
         
     <form id="update">
-        <input type="submit" value="Get Selected user" />
+        <input type="submit" value="Hent valgte bruger" />
     </form>
 
     

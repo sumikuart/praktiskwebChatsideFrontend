@@ -12,7 +12,7 @@ import Face4 from './assets/face4.jpg'
 export default class Chatsite extends Component {
 render() {
 return (
-<div>
+<div className="chatsite">
     <img className="bagchat" src={Baggrundchat} alt="" />
 
     <div id="frame">
@@ -21,20 +21,8 @@ return (
 
             <div id="profile">
                 <div className="wrap">
-                    <img id="profile-img" src={Face} className="status-online" alt="" />
+                    <img src={Face} className="status-online" alt="" />
                     <p className="name">Sommer</p>
-
-                    <div id="status-muligheder">
-                        <ul>
-                            <li className="status-online">
-                                <p>Online</p>
-                            </li>
-
-                            <li className="status-offline">
-                                <p>Offline</p>
-                            </li>
-                        </ul>
-                    </div>
 
                 </div>
             </div>
@@ -42,8 +30,87 @@ return (
             <div id="search">
                 <input type="text" placeholder="Søg bruger..." />
             </div>
-
-            <div className="brugerliste">
+            <div className="brugerliste-site">
+                <div className="bruger">
+                    <ul>
+                        <li>
+                            <div className="wrap">
+                                <img src={Face2} className="status-offline" alt="" />
+                                <p className="name">Batman</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="bruger">
+                    <ul>
+                        <li>
+                            <div className="wrap">
+                                <img src={Face2} className="status-offline" alt="" />
+                                <p className="name">Batman</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="bruger">
+                    <ul>
+                        <li>
+                            <div className="wrap">
+                                <img src={Face2} className="status-offline" alt="" />
+                                <p className="name">Batman</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="bruger">
+                    <ul>
+                        <li>
+                            <div className="wrap">
+                                <img src={Face2} className="status-offline" alt="" />
+                                <p className="name">Batman</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="bruger">
+                    <ul>
+                        <li>
+                            <div className="wrap">
+                                <img src={Face2} className="status-offline" alt="" />
+                                <p className="name">Batman</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="bruger">
+                    <ul>
+                        <li>
+                            <div className="wrap">
+                                <img src={Face2} className="status-offline" alt="" />
+                                <p className="name">Batman</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="bruger">
+                    <ul>
+                        <li>
+                            <div className="wrap">
+                                <img src={Face2} className="status-offline" alt="" />
+                                <p className="name">Batman</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="bruger">
+                    <ul>
+                        <li>
+                            <div className="wrap">
+                                <img src={Face2} className="status-offline" alt="" />
+                                <p className="name">Batman</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <div className="bruger">
                     <ul>
                         <li>
@@ -66,78 +133,11 @@ return (
                     </ul>
                 </div>
 
-                <div className="bruger">
-                    <ul>
-                        <li>
-                            <div className="wrap">
-                                <img src={Face2} className="status-offline" alt="" />
-                                <p className="name">Batman</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="bruger">
-                    <ul>
-                        <li>
-                            <div className="wrap">
-                                <img src={Face2} className="status-offline" alt="" />
-                                <p className="name">Batman</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="bruger">
-                    <ul>
-                        <li>
-                            <div className="wrap">
-                                <img src={Face2} className="status-offline" alt="" />
-                                <p className="name">Batman</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="bruger">
-                    <ul>
-                        <li>
-                            <div className="wrap">
-                                <img src={Face2} className="status-offline" alt="" />
-                                <p className="name">Batman</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="bruger">
-                    <ul>
-                        <li>
-                            <div className="wrap">
-                                <img src={Face2} className="status-offline" alt="" />
-                                <p className="name">Batman</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="bruger">
-                    <ul>
-                        <li>
-                            <div className="wrap">
-                                <img src={Face2} className="status-offline" alt="" />
-                                <p className="name">Batman</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
 
             </div>
 
 
-
             <div id="bottom-bar">
-
                 <button>Se din profil</button>
                 <button>Indstillinger</button>
             </div>
@@ -148,8 +148,8 @@ return (
         <div className="content">
 
             <div className="content-profile">
-                <img src={Face4} alt="" />
-                <p>Two face</p>
+                <img src={Face4} className="status-online" alt="" />
+                <p className="content-name">Two face</p>
             </div>
 
             <div className="messages">
@@ -194,12 +194,12 @@ return (
                     </li>
                 </ul>
             </div>
-            <div className="message-input">
-                <div className="wrap">
+         
+                <div className="wraptext">
                     <input type="text" placeholder="Skriv din besked..." />
                     <button className="submit">Send</button>
                 </div>
-            </div>
+           
         </div>
     </div>
 

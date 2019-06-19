@@ -167,13 +167,11 @@ return (
         <table>
 
         <thead>
-
             <tr className="tr">
                 <th className="td">Bruger Navn:</th>
                 <th className="td">Type:</th>
                 <th className="td">Status:</th>
             </tr>
-          
         </thead>
 
             <tbody onClick={this.props.change_user_id}>
