@@ -6,6 +6,7 @@ import Chatsite from './components/chatModul/chatsite';
 import Statistik from './components/adminModul/statistikAdmin/statistikAdmin'
 import UserAdmin from './components/adminModul/userAdmin/userAdmin'
 import CreatUserFromAdmin from './components/adminModul/creatUserAdmin/creatUserAdmin'
+import BrugerProfil from './components/brugerModul/brugerProfil/brugerProfil'
 // import Chatsite from './components/chatModul/chatsite'
 
 import './App.css';
@@ -24,6 +25,7 @@ return (
     <Route exact path="/founder/statistik" component={Statistik} />
     <Route exact path="/founder/creatuser" component={CreatUserFromAdmin} />
     <Route exact path="/statistik" component={Statistik} />
+    <Route exact path="/founder/brugerprofil" component={BrugerProfil} />
   </Switch>
   
 </Router>

@@ -1,0 +1,36 @@
+
+.brugerprofil {
+    width: 60%;
+    border: solid 1px black;
+    margin: auto;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 45%, rgb(55, 169, 197));
+    padding-bottom: 3%
+}
+
+.img {
+    width: 12%;
+    margin: -6.2% 1% 1% 1%
+}
+.imgclose {
+ position: absolute;width: 30px;top: 17%;right: 21%;
+}
+.imgclose:hover {
+    transform: rotate(20deg);cursor: pointer;
+   }
+h1 {
+    text-align: center
+}
+
+span {
+    font-size: 20px;
+    font-weight: 600
+}
+
+.raekke {
+    margin: -2% 10% 4% 40%;
+    border-bottom: solid 1px;padding: 1%
+}
+
+label {
+    font-size: 20px;
+}

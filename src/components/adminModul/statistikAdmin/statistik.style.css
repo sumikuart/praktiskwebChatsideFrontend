@@ -1,10 +1,16 @@
 /* Statistik-grid */
 
 .statistik {
-    display: grid;
-    grid-template-columns: 20% 1fr;
-    height: 800px;
-    overflow: hidden;
-   
-  }
+  display: grid;
+  grid-template-columns: 20% 50%;
+  height: 800px;
 
+
+}
+
+.chartjs-render-monitor {
+  width: 150% !important;
+  height: 100% !important;
+}
+
+labels{}
