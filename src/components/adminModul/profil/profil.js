@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Moment from 'react-moment';
 import './profil.style.css';
 
 
@@ -20,7 +21,12 @@ state={
 
     // Confirm Box States:
     confirm_hide: false,
-    confirm_name: ''
+    confirm_name: '',
+
+    //TimeOut State: 
+    timeout_hide:false,
+    timeout_type: '',
+    timeleft:''
 }
 
 
@@ -34,7 +40,9 @@ componentDidMount(){
             user_password: response.data.user_password,
             user_type:response.data.user_type,
             user_note: response.data.user_note,
-            user_timeout:response.data.user_timeout, 
+            user_timeout:response.data.user_timeout,
+            user_timeout_length:response.data.user_timeout_length,
+            user_created:response.data.user_created,
             user_banned: response.data.user_banned,
             user_verified: response.data.user_verified,
             user_online: response.data.user_online
@@ -109,7 +117,8 @@ saveChangesHandler = (e) =>{
         user_note: this.state.user_note,
         user_timeout:this.state.user_timeout, 
         user_banned: this.state.user_banned,
-        user_verified: this.state.user_verified
+        user_verified: this.state.user_verified,
+        user_timeout_length:this.state.user_timeout_length
 
     }
 
@@ -267,6 +276,93 @@ handelBan = (e) =>{
 
 }
 
+// TIMEOUT BOX:
+startHandelTimeout = (e) => {
+    e.preventDefault();
+
+    this.setState({
+        timeout_hide: true
+    })
+}
+
+onClickHandlerTimeBox = (e) =>{
+
+    e.preventDefault();
+
+    if(this.state.timeout_hide) {
+        this.setState({
+            timeout_hide:false
+        })
+    } else {
+        this.setState({
+            timeout_hide:true
+        })
+    }
+}
+
+// TIMEOUT FUNCKTION
+
+addTimeoutHandler = (e) => {
+    
+        this.setState({
+            timeout_type: e.target.value
+        }) 
+
+}
+
+onClickRemoceTimeout = (e) => {
+    
+    e.preventDefault();  
+
+    this.setState({
+        timeout_type:'',
+        user_timeout: 'None',
+        timeout_hide:false
+    }) 
+
+}
+
+
+
+
+
+
+setTimeoutStart = (e) => {
+
+    e.preventDefault();  
+
+        this.setState({
+            user_timeout: new Date().getTime()
+        })
+  
+    if(this.state.timeout_type === "smallTimeout" ) {
+
+
+        this.setState({
+            user_timeout_length: <Moment format="DD/MM/YYYY hh:mm:ss" add={{minutes: 10}}>{this.state.user_timeout}</Moment>,
+            timeout_hide:false
+        }) 
+
+    }
+    
+    if(this.state.timeout_type === "mediumTimeout" ) {
+        this.setState({
+            user_timeout: '60 min',
+            timeout_hide:false
+        }) 
+    }
+    
+    if(this.state.timeout_type === "bigTimeout" ) {
+        this.setState({
+            user_timeout: '1 dag',
+            timeout_hide:false
+        }) 
+    }
+}
+
+
+
+
 render() {
 return (
 <div className="profil">
@@ -315,7 +411,10 @@ return (
                 
                 <div>
                     <label>Timeout:</label>
-              <div>Ingen</div>
+
+                    <div>
+                        {this.state.timeleft}
+                    </div>
                 </div>
 
                 <div>
@@ -346,7 +445,7 @@ return (
             <input type="submit" value="Ban Bruger"/>
         </form>
 
-        <form className="profilknap">  
+        <form className="profilknap" onSubmit={this.startHandelTimeout}>  
             <input type="submit" value="Timeout Bruger"/>
         </form>
 
@@ -365,7 +464,7 @@ return (
 
     </div>
 
-
+{/* Ban/ Godkend/ Slet box og fremvisning */}
     <div className={this.state.confirm_hide ? 'masterConfirmBox' : 'hide'}>
         <div className="ProfilConfirmBoxBackdrop"></div>
         <div className="ProfilConfirmBox">
@@ -390,6 +489,44 @@ return (
                 </form>
             </div>
         </div>
+    </div>
+
+
+{/* TIME OUT!!! */}
+    <div className={this.state.timeout_hide ? 'masterTimeoutBox' : 'hide'}>
+        <div className="ProfilConfirmBoxBackdrop"></div>
+
+            <div className="ProfilConfirmBox">
+                <div className="closebox" onClick={this.onClickHandlerTimeBox}> 
+                    <p>X</p>
+                </div>
+
+                <p>Time - Out user: <span> {this.state.user_name} </span></p>
+
+                <p>start: <Moment format="DD/MM/YYYY hh:mm:ss">{this.state.user_timeout}</Moment> slut: {this.state.user_timeout_length}</p>
+
+                <div className="knapTimeoutDiv">
+
+                    <form onChange={this.addTimeoutHandler} onSubmit={this.setTimeoutStart}>
+
+                        <input type="radio" name="timeout_time" value="smallTimeout"/> 10 min
+                        <input type="radio" name="timeout_time" value="mediumTimeout"/> 60 min
+                        <input type="radio" name="timeout_time" value="bigTimeout"/> 1 dag
+
+
+                        <input type="submit" value="Ready Timeout"/>
+                    </form>
+
+                </div>
+
+                <form onSubmit={this.onClickRemoceTimeout}>
+                    <input type="submit" value="Remove Timeout"/>
+                </form>
+
+                <form onSubmit={this.onClickHandlerTimeBox}>
+                    <input type="submit" value="Cancel"/>
+                </form>
+            </div>
     </div>
 </div>
 )
