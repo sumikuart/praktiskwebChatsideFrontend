@@ -4,10 +4,10 @@
 /* logo */
 
 .logo {
-  width: 8%;
+  width: 5%;
   position: absolute;
-  top: 38%;
-  left: 10%;
+  top: 2%;
+  left: 1%;
   transform: rotateY(180deg)
 }
 
@@ -23,7 +23,7 @@
 /* navbar top */
 
 .nav {
-    background-color: rgb(182, 63, 166);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 45% , rgb(169, 55, 197));
 }
 
 

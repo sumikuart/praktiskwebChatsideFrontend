@@ -148,8 +148,8 @@ return (
 
             <div className="dropbtn">Bruger info
 
-            <form onSubmit={this.onSubmit}>
-                <select  onChange={this.onChangeUserSearchType}> 
+            <form className="formbrugerliste" onSubmit={this.onSubmit}>
+                <select className="selectvenstre" onChange={this.onChangeUserSearchType}> 
                     <option value="allusers"> Alle Bruger </option>
                     <option value="onlineusers" > Online Bruger </option>
                     <option value="Adminusers" > Admin Bruger </option>
@@ -157,7 +157,7 @@ return (
                     <option value="Timeoutusers"> Timeout Bruger </option>
                     <option value="Bannedusers"> Banned Bruger </option>
                 </select>  
-                <button type="submit"> søg </button>
+                <button type="submit"> Søg </button>
             </form>
 
 
@@ -167,13 +167,11 @@ return (
         <table>
 
         <thead>
-
             <tr className="tr">
                 <th className="td">Bruger Navn:</th>
                 <th className="td">Type:</th>
                 <th className="td">Status:</th>
             </tr>
-          
         </thead>
 
             <tbody onClick={this.props.change_user_id}>

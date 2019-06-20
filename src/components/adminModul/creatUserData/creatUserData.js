@@ -73,17 +73,17 @@ onSubmit = (e) => {
                 <form onSubmit={this.onSubmit}>
 
                     <div>
-                        <label> User Name:</label>
+                        <label> Bruger navn:</label><br/>
                         <input type="text" onChange={this.onChangeName}/>
                     </div>
 
                     <div>
-                        <label>Email:</label>
+                        <label>Email:</label> <br/>
                         <input type="text"  onChange={this.onChangeMail}/>
                     </div>
 
                     <div>
-                        <label> Password:</label>
+                        <label> Kodeord:</label><br/>
                         <input type="text" onChange={this.onChangePassword}/>
                     </div>
 
@@ -95,7 +95,7 @@ onSubmit = (e) => {
                     </div> */}
 
                     <div>
-                        <input type="submit" value="Opret Bruger"/>
+                        <input className="button" type="submit" value="Opret Bruger"/>
                     </div>
 
                 </form>
