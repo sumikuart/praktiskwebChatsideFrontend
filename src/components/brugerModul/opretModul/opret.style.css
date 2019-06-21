@@ -44,7 +44,7 @@
   font-size: 14px;
 }
 
-.loginbutton {
+.form .loginbutton {
   text-transform: uppercase;
   background: rgb(58, 116, 143);
   width: 100%;
@@ -57,7 +57,13 @@
   margin: 10% 0% 0% 0%;
 }
 
-.form button:hover
+.form .loginbutton:hover
   {
   background: rgb(74, 146, 180);
+}
+
+
+
+.validateInfoBox p {
+  font-size:18px; 
 }

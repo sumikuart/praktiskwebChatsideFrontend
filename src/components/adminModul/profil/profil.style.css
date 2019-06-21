@@ -206,3 +206,7 @@
 .hide {
   display: none;
 }
+
+.timeputP {
+  font-size: 14px;
+}

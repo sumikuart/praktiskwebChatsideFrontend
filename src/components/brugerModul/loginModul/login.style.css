@@ -31,6 +31,6 @@
     margin-top: 40%
 }
 
-.form button:hover {
+.form .loginbutton:hover {
     background: rgb(74, 146, 180);
 }
