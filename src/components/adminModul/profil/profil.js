@@ -13,6 +13,7 @@ state={
     user_type: '', 
     user_note: '', 
     user_timeout: '', 
+    user_timeout_length: '',
     user_banned: '',
     user_verified: '',
     user_online: '',
@@ -116,9 +117,10 @@ saveChangesHandler = (e) =>{
         user_type:this.state.user_type,
         user_note: this.state.user_note,
         user_timeout:this.state.user_timeout, 
+        user_timeout_length:this.state.user_timeout_length,
         user_banned: this.state.user_banned,
-        user_verified: this.state.user_verified,
-        user_timeout_length:this.state.user_timeout_length
+        user_verified: this.state.user_verified
+
 
     }
 
@@ -162,7 +164,7 @@ onClickHandlerJa =(e) =>{
         {this.handelBan()}
     }
 
-    if(this.state.confirm_name=='Slet'){
+    if(this.state.confirm_name=='slette'){
         {this.handelSlet()}
     }
     
@@ -332,16 +334,16 @@ setTimeoutStart = (e) => {
     e.preventDefault();  
 
         this.setState({
-            user_timeout: new Date().getTime()
+            user_timeout: <Moment  format="DD/MM/YYYY hh:mm:ss">{new Date().getTime()}</Moment> 
         })
   
-    if(this.state.timeout_type === "smallTimeout" ) {
-
+         if(this.state.timeout_type === "smallTimeout" ) {
 
         this.setState({
-            user_timeout_length: <Moment format="DD/MM/YYYY hh:mm:ss" add={{minutes: 10}}>{this.state.user_timeout}</Moment>,
+            user_timeout_length: <Moment format="DD/MM/YYYY hh:mm:ss" add={{minutes: 10}}>{new Date().getTime()}</Moment>,
             timeout_hide:false
-        }) 
+        })
+        
 
     }
     
@@ -358,9 +360,8 @@ setTimeoutStart = (e) => {
             timeout_hide:false
         }) 
     }
+    console.log(this.state.user_timeout_length)
 }
-
-
 
 
 render() {
@@ -413,6 +414,8 @@ return (
                     <label>Timeout:</label>
 
                     <div>
+                        <p className="timeputP">start:{this.state.user_timeout} slut: {this.state.user_timeout_length} timeleft: {this.state.timeleft}</p>
+
                         {this.state.timeleft}
                     </div>
                 </div>
@@ -503,9 +506,7 @@ return (
 
                 <p>Time - Out user: <span> {this.state.user_name} </span></p>
 
-                <p>start: <Moment format="DD/MM/YYYY hh:mm:ss">{this.state.user_timeout}</Moment> slut: {this.state.user_timeout_length}</p>
-
-                <div className="knapTimeoutDiv">
+               <div className="knapTimeoutDiv">
 
                     <form onChange={this.addTimeoutHandler} onSubmit={this.setTimeoutStart}>
 

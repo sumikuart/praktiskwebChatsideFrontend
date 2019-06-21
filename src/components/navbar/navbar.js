@@ -9,7 +9,7 @@ return (
 
     <nav className="nav">
 
- 
+
         <ul className="ul"> 
    
             <li className="li"> <Link className="link" to="/">Forside</Link></li>
