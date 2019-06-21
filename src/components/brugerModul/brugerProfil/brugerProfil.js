@@ -4,6 +4,7 @@ import Face from './face.jpg'
 import Close from './close.png'
 
 export default class BrugerProfil extends Component {
+    
 render() {
 return (
 <div id="side">
@@ -32,6 +33,9 @@ return (
     </div>
 
     <img className="imgclose" src={Close} alt="" />
+          
+
+   
 </div>
 </div>
 )
