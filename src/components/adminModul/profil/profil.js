@@ -160,7 +160,7 @@ onClickHandlerJa =(e) =>{
 
      
 
-    if(this.state.confirm_name=='Unban' || this.state.confirm_name=='Ban'){
+    if(this.state.confirm_name=='Unban' || this.state.confirm_name=='banned'){
         {this.handelBan()}
     }
 
@@ -168,7 +168,7 @@ onClickHandlerJa =(e) =>{
         {this.handelSlet()}
     }
     
-    if(this.state.confirm_name=='Fjern godkendelse' || this.state.confirm_name=='Godkend'){
+    if(this.state.confirm_name=='fjerne godkendelse' || this.state.confirm_name=='godkende'){
         {this.handelGodkend()}
     }
 
@@ -188,7 +188,7 @@ startHandelGodkend = (e) =>{
     } else {
         this.setState({
             confirm_hide:true,
-            confirm_name: 'Godkend'
+            confirm_name: 'godkende'
     
         })
 
