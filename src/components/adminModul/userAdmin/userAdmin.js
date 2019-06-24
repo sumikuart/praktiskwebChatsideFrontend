@@ -15,6 +15,7 @@ export default class UserAdmin extends Component {
         user_type: '', 
         user_note: '', 
         user_timeout: '', 
+        user_timeout_length:'',
         user_banned: '',
         user_verified: '',
         user_online: '',
