@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Navbar from './components/navbar/navbar';
-import ForsideTo from './components/landingModul/forsideTo'
+import Forside from './components/landingModul/forside'
 import Chatsite from './components/chatModul/chatsite';
 import Statistik from './components/adminModul/statistikAdmin/statistikAdmin'
 import UserAdmin from './components/adminModul/userAdmin/userAdmin'
@@ -19,7 +19,7 @@ return (
   <Navbar />
 
   <Switch>
-    <Route exact path="/" component={ForsideTo} />
+    <Route exact path="/" component={Forside} />
     <Route exact path="/chat" component={Chatsite} />
     <Route path="/founder/useradmin/:id" component={UserAdmin}/>
     <Route exact path="/founder/statistik" component={Statistik} />
