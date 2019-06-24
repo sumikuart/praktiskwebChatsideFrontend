@@ -49,6 +49,7 @@ return (
 
         <img className="imgclose" src={Close} alt="" />
 <input className="gem" type="button" value="Gem"/>
+<input className="logud" type="button" value="Log ud"/>
     </div>
 </div>
 )

@@ -121,6 +121,13 @@ label {
 .gem {
     background-color: rgba(223, 223, 223, 0.514);
     padding: 1% 2% 1% 2%;
-    margin: 10% 0% 0% 40%;
+    margin: 10% 0% 0% 35%;
+    cursor: pointer;
+}
+
+.logud {
+    background-color: rgba(223, 223, 223, 0.514);
+    padding: 1% 2% 1% 2%;
+    margin: 10% 0% 0% 10%;
     cursor: pointer;
 }
