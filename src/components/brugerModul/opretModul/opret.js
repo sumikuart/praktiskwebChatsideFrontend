@@ -175,11 +175,11 @@ if (this.state.check_name === 1){
     console.log("yay navn er godkendt")
 
     this.setState({
-        errror_name:"yay navn er godkendt"
+        errror_name:"Dit brugernavn er godkendt"
     })
 
 } else if (this.state.check_name === 0) {
-    console.log('brugernavnet er ikke godkendt Da det er taget af en anden bruger')
+    console.log('Brugernavnet er desværre optaget.')
 
     this.setState({
         errror_name:"brugernavnet er ikke godkendt Da det er taget af en anden bruger"
@@ -190,20 +190,20 @@ if (this.state.check_password === 1){
     console.log("yay password er godkendt")
 
     this.setState({
-        errror_password:"yay password er godkendt"
+        errror_password:"Dit kodeord er godkendt"
     })
 } else if(this.state.check_password === 0){
-    console.log("yay password er godkendt da de ikke er ens")
+    console.log("Kodeorderne er ikke er ens")
 
     this.setState({
-        errror_password:"yay password er godkendt da de ikke er ens"
+        errror_password:"Kodeorderne er ikke er ens"
     })
 }
 else if(this.state.check_password === 2) {
     console.log('password er ikke lang nok')
 
     this.setState({
-        errror_password:'password er ikke lang nok, minimum 4 tegn'
+        errror_password:'Kodeordet er ikke lang nok, minimum 4 tegn'
     })
 }
 
@@ -212,23 +212,23 @@ if (this.state.check_mail === 1){
     console.log("yay mail er godkendt")
 
     this.setState({
-        errror_mail:"yay mail er godkendt"
+        errror_mail:"Yay din mail er godkendt"
     })
 
 } else if (this.state.check_mail === 0) {
-    console.log('du har en konto med denne mail')
+    console.log('Du har en konto med denne mail')
 
     
     this.setState({
-        errror_mail:"der er en konto med denne mail"
+        errror_mail:"Der er en konto med denne mail i forvejen"
     })
 
 } else if (this.state.check_mail === 2) {
-    console.log('dette er ikke en mail')
+    console.log('Dette er ikke en mail')
 
     
     this.setState({
-        errror_mail:"dette er ikke en mail"
+        errror_mail:"Dette er ikke en mail"
     })
 }
 
@@ -270,7 +270,7 @@ if (this.state.check_name === 1 && this.state.check_password=== 1 && this.state.
 
 render() {
 return (
-<div>
+<div className="opret">
 
     <div className=" form formopret">
     <h2>Opret Bruger</h2>

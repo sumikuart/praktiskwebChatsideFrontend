@@ -72,7 +72,7 @@ this.setState({
         } else {
             console.log("We have no users under that name")
             this.setState({
-                loginInfo: "vi har ingen bruger med dette navn"
+                loginInfo: "Vi har ingen bruger med dette navn"
             })
         }
 
@@ -83,14 +83,14 @@ this.setState({
 
 render() {
 return (
-<div>
+<div className="login">
    
     <div className="form formlog">
     <h2>Login</h2>
         <form id="login-form" className="login-form" onSubmit={this.submitLoginHandler}>
             <input type="text" placeholder="Brugernavn" onChange={this.handelChangeUserName} value={this.state.user_name}/>
             <input type="password" placeholder="Kodeord" onChange={this.handelChangeUserpassword} value={this.state.user_password} />
-            <input type="submit" className="loginbutton" value="Login" />
+            <input type="submit" id="loginbutton" value="Login" />
         </form>
 
         <div>
