@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './brugerProfil.style.css';
 import Face from './face.jpg'
 import Close from './close.png'
-import Ret from './ret.png'
 
 export default class BrugerProfil extends Component {
 

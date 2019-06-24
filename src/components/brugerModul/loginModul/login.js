@@ -28,7 +28,7 @@ handelChangeUserpassword = (e) => {
 submitLoginHandler = (e) => {
     e.preventDefault();
 this.setState({
-    loginInfo:"vi mangler info"
+    loginInfo:"Vi mangler info"
 })
     axios.get('http://localhost:4040/search/'+this.state.user_name)
     .then(response => {
@@ -61,18 +61,18 @@ this.setState({
                 .then( res => console.log(res.data))
             
                 this.setState({
-                    loginInfo: "Hej " + this.state.users[0].user_name + " Du er logget ind"
+                    loginInfo: "Hej " + this.state.users[0].user_name + ". Du er nu logget ind"
                 })
             } else {
                 console.log("error Wrong password")
                 this.setState({
-                    loginInfo: "Forkert kodeord"
+                    loginInfo: "Kodeordet er forkert"
                 })
             }
         } else {
             console.log("We have no users under that name")
             this.setState({
-                loginInfo: "Vi har ingen bruger med dette navn"
+                loginInfo: "Vi har ingen med det brugernavn"
             })
         }
 
@@ -93,7 +93,7 @@ return (
             <input type="submit" id="loginbutton" value="Login" />
         </form>
 
-        <div>
+        <div className="p">
             <p>{this.state.loginInfo}</p>
         </div>
     </div> 
