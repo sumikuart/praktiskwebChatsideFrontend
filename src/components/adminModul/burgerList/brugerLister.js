@@ -82,15 +82,15 @@ onSubmit = (e) => {
     }
 
 
-    if(this.state.userTypeSearch === "Timeoutusers" ) {
-        axios.get('http://localhost:4040/timeoutlist').
-        then(response => {
-            this.setState({
-                users: response.data   
-            });
-            console.log(this.state.users)
-        })
-    }
+    // if(this.state.userTypeSearch === "Timeoutusers" ) {
+    //     axios.get('http://localhost:4040/timeoutlist').
+    //     then(response => {
+    //         this.setState({
+    //             users: response.data   
+    //         });
+    //         console.log(this.state.users)
+    //     })
+    // }
 
     if(this.state.userTypeSearch === "Bannedusers" ) {
         axios.get('http://localhost:4040/banlist').

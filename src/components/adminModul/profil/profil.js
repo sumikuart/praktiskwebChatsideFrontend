@@ -124,7 +124,8 @@ saveChangesHandler = (e) =>{
         user_timeout:this.state.user_timeout, 
         user_timeout_length:this.state.user_timeout_length,
         user_banned: this.state.user_banned,
-        user_verified: this.state.user_verified
+        user_verified: this.state.user_verified,
+        user_online:this.state.user_online
 
 
     }
