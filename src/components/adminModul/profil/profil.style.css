@@ -84,8 +84,8 @@
 }
 
 .profil .profilknap input {
-  margin: 20px;
-  font-size: 15px;
+  margin: 2px 20px 5px 20px;
+  font-size: 16px;
   cursor: pointer;
   padding: 12px;
 }
@@ -154,7 +154,11 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.selecthojre{font-size: 15px}
+
+.selecthojre {
+  font-size: 15px
+}
+
 .profil .ProfilConfirmBox .closebox {
   width: 60px;
   text-align: center;
@@ -171,7 +175,8 @@
 }
 
 .profil .ProfilConfirmBox .closebox:hover {
-  transform: rotate(20deg);font-weight: bold
+  transform: rotate(20deg);
+  font-weight: bold
 }
 
 .profil .ProfilConfirmBox p {
@@ -207,7 +212,32 @@
   display: none;
 }
 
-.timeputP {
-  font-size: 14px;
+.ProfilConfirmBox {
+  margin: 0;
 }
 
+.knapTimeoutDiv {}
+
+.formtimeout {
+  width: 70%;
+  display: flex;
+  font-size: 14px;
+  margin: 8% 0% 0% 17%;
+}
+
+.hide .formtimeout input {
+  font-size: 16px
+}
+
+.radio {
+  margin: 13px 0px 0px 0px;
+  font-size: 20px;  height: 20px;
+}
+
+
+.tilelabel {
+  position: absolute;
+  margin: 14px 10px 10px 10px;
+  padding: 0px 550px 10px 10px;
+  font-size: 18px
+}
