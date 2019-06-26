@@ -237,8 +237,7 @@ startHandelSlet = (e) =>{
     if(!this.state.disable_function){
         this.setState({
             confirm_hide:true,
-            confirm_name: 'slette',
-            disable_function:true
+            confirm_name: 'slette'
     })
 }
 }
@@ -271,7 +270,8 @@ handelSlet =(e)=>{
         user_mail:'',
         user_password: '',
         user_type:this.state.user_type,
-        user_note: ''
+        user_note: '',
+        disable_function:true
 
 
     })
