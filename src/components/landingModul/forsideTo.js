@@ -20,7 +20,7 @@ return (
         <h1>Chatweb</h1>
 
         <h3>Chat forum for webudviklere i alle stadier.</h3>
-        <h3> Stille spørgsmål, diskutere løsninger og få inspiration. </h3>
+        <h3> Stille spørgsmål, diskutere løsninger og få inspiration.</h3>
         <h3>Start med at oprette din gratis profil eller log ind</h3>
     </div>
 

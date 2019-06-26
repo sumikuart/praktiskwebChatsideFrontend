@@ -1,6 +1,8 @@
-import React,{Component}from 'react'
+import React,{Component}from 'react';
+import {Link} from 'react-router-dom'
 import './login.style.css';
 import axios from 'axios';
+
 
 export default class Login extends Component {
 
@@ -10,7 +12,9 @@ state= {
 
     users: '',
 
-    loginInfo: ""
+    loginInfo: "",
+    accestype: "",
+    login_state:false
 }
 
 handelChangeUserName = (e) => {
@@ -59,10 +63,35 @@ this.setState({
 
                 axios.put('http://localhost:4040/edit/' + this.state.users[0]._id, updateLoginStatus)
                 .then( res => console.log(res.data))
+
+
+                if (this.state.users[0].user_type === 'user') {
+
+                    this.setState({
+                        loginInfo: "Hej Bruger " + this.state.users[0].user_name + ". Du er logget ind",
+                        accestype:"userdemo",
+                        login_state: true
+                    })
+
+
+
+                } else {
+
+                    this.setState({
+                        loginInfo: "Hej Admin " + this.state.users[0].user_name + ". Du er logget ind",
+                        accestype:"founder/useradmin/5cffb52d1fef910338caebef",
+                        login_state: true
+                    })
+
+                }
+
+
             
+
                 this.setState({
                     loginInfo: "Hej " + this.state.users[0].user_name + ". Du er nu logget ind"
                 })
+
             } else {
                 console.log("error Wrong password")
                 this.setState({
@@ -95,6 +124,11 @@ return (
 
         <div className="p">
             <p>{this.state.loginInfo}</p>
+
+            <div className={this.state.login_state ? 'show_login_ongo' : 'hide_login_ongo'}>
+             <Link to={'/'+ this.state.accestype}>Fortsæt</Link>
+            </div>
+       
         </div>
     </div> 
 
