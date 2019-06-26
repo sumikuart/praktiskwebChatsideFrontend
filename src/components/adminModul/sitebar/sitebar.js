@@ -22,14 +22,8 @@ return (
             <li id="sli1">
                 <Link to="/founder/creatuser">Opret Bruger </Link>
             </li>
-            <li id="sli1">
-                <Link to="/founder/brugerProfil">Bruger profil </Link>
-            </li>
 
         </ul>
-
-            
-
     </nav>
 
 )

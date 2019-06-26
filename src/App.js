@@ -26,8 +26,9 @@ return (
     <Route path="/founder/useradmin/:id" component={UserAdmin}/>
     <Route exact path="/founder/statistik" component={Statistik} />
     <Route exact path="/founder/creatuser" component={CreatUserFromAdmin} />
-    <Route exact path="/statistik" component={Statistik} />
     <Route exact path="/founder/brugerprofil" component={BrugerProfil} />
+    <Route exact path="/statistik" component={Statistik} />
+    <Route exact path="/logout/" component={BrugerProfil} />
   </Switch>
   
 </Router>
