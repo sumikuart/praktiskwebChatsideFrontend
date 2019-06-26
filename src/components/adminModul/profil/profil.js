@@ -27,7 +27,10 @@ state={
     //TimeOut State: 
     timeout_hide:false,
     timeout_type: '',
-    timeleft:''
+    timeleft:'',
+
+    // Disable actions with no user:
+    disable_function:true
 }
 
 
@@ -46,7 +49,9 @@ componentDidMount(){
             user_created:response.data.user_created,
             user_banned: response.data.user_banned,
             user_verified: response.data.user_verified,
-            user_online: response.data.user_online
+            user_online: response.data.user_online,
+
+            disable_function:false
         })
     }).catch(function(err) {
         console.log('NOOO did not get user in Mount')
@@ -179,20 +184,25 @@ startHandelGodkend = (e) =>{
     e.preventDefault();
 
 
-    if(this.state.user_verified){
-        this.setState({
-            confirm_hide:true,
-            confirm_name: 'fjerne godkendelse'
+    if(!this.state.disable_function){
+
+        if(this.state.user_verified){
+            this.setState({
+                confirm_hide:true,
+                confirm_name: 'fjerne godkendelse'
+        
+            })
+        } else {
+            this.setState({
+                confirm_hide:true,
+                confirm_name: 'godkende'
+        
+            })
     
-        })
-    } else {
-        this.setState({
-            confirm_hide:true,
-            confirm_name: 'godkende'
-    
-        })
+        }
 
     }
+
 
 }
 
@@ -201,6 +211,7 @@ startHandelBan = (e) =>{
     e.preventDefault();
 
 
+    if(!this.state.disable_function){
     if(this.state.user_banned){
         this.setState({
             confirm_hide:true,
@@ -216,20 +227,25 @@ startHandelBan = (e) =>{
 
     }
 
-
+    }
 }
 
 startHandelSlet = (e) =>{
     e.preventDefault();
 
 
+    if(!this.state.disable_function){
         this.setState({
             confirm_hide:true,
-            confirm_name: 'slette'
+            confirm_name: 'slette',
+            disable_function:true
     })
+}
 }
 
 handelGodkend = (e) =>{
+
+
     if(this.state.user_verified){
         this.setState({
             user_verified: false,
@@ -282,9 +298,11 @@ handelBan = (e) =>{
 startHandelTimeout = (e) => {
     e.preventDefault();
 
+    if(!this.state.disable_function){
     this.setState({
         timeout_hide: true
     })
+}
 }
 
 onClickHandlerTimeBox = (e) =>{
@@ -414,9 +432,9 @@ return (
                     <label>Timeout:</label>
 
                     <div>
-                        <p className="timeputP">start:{this.state.user_timeout} slut: {this.state.user_timeout_length} timeleft: {this.state.timeleft}</p>
-
-                        {this.state.timeleft}
+                        {/* <p className="timeputP">start:{this.state.user_timeout} slut: {this.state.user_timeout_length} timeleft: {this.state.timeleft}</p> */}
+{/* 
+                        {this.state.timeleft} */}
                     </div>
                 </div>
 
@@ -448,6 +466,8 @@ return (
             <input type="submit" value="Ban Bruger"/>
         </form>
 
+
+ 
         <form className="profilknap" onSubmit={this.startHandelTimeout}>  
             <input type="submit" value="Timeout Bruger"/>
         </form>
