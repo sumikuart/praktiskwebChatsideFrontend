@@ -1,0 +1,58 @@
+
+
+
+/* logo */
+
+.logo {
+  width: 5%;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  transform: rotateY(180deg)
+}
+
+.bag {
+  position: absolute;
+  width: 80%;
+  top: 0;
+  right: 0;
+}
+
+
+
+/* navbar top */
+
+.nav {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 45% , rgb(169, 55, 197));
+}
+
+
+.nav .ul {
+    display: flex;
+    font-size: 20px;
+    padding: 2%;
+  }
+  
+  
+ .nav .li {
+    margin-left: 7%;
+    list-style-type: none;
+    z-index: 1;
+  
+  }
+  
+.nav  li:nth-child(1) {
+    margin-left: 60%
+  }
+  
+.nav  .link {
+    text-decoration: none;
+    color: white
+  }
+  
+.nav  nav button {
+    margin: 0 0 0 5%;
+    font-size: 15px;
+    cursor: pointer;
+  
+  }

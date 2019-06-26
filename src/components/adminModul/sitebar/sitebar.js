@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from "react-router-dom";
 
-import '../App.css';
+import './siteBar.style.css';
 
 
 class Sitebar extends Component {
@@ -10,19 +10,20 @@ return (
 
     <nav id="snav">
         
-        <input className="søg" type="text" placeholder="Søg Bruger" />
-        <button className="søgsubmit" type="submit">Søg</button>
+
 
         <ul id="sul">
             <li id="sli">
-                <Link to="/founder/useradmin">Bruger Admin</Link>
+                <Link to="/founder/useradmin/5cffb52d1fef910338caebef">Bruger Admin</Link>
             </li>
             <li id="sli1">
                 <Link to="/founder/statistik">Statistik </Link>
             </li>
+            <li id="sli1">
+                <Link to="/founder/creatuser">Opret Bruger </Link>
+            </li>
 
         </ul>
-
     </nav>
 
 )

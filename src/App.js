@@ -1,25 +1,36 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route} from "react-router-dom";
-import Navbar from './components/navbar';
-import Founder from './components/founder'
-import Statistik from './components/statistik'
-import UserAdmin from './components/userAdmin'
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Navbar from './components/navbar/navbar';
+import Forside from './components/landingModul/forside'
+import ForsideTo from './components/landingModul/forsideTo'
+import Chatsite from './components/chatModul/chatsite';
+import Statistik from './components/adminModul/statistikAdmin/statistikAdmin'
+import UserAdmin from './components/adminModul/userAdmin/userAdmin'
+import CreatUserFromAdmin from './components/adminModul/creatUserAdmin/creatUserAdmin'
+import BrugerProfil from './components/brugerModul/brugerProfil/brugerProfil'
+// import Chatsite from './components/chatModul/chatsite'
+
 import './App.css';
-
-
 
 export default class App extends Component {
 render() {
 return (
 <Router>
+  
   <Navbar />
- 
-
-  <Route exact path="/founder" component={Founder} />
-  <Route exact path="/founder/useradmin" component={UserAdmin} />
-  <Route exact path="/founder/statistik" component={Statistik} />
-  <Route exact path="/statistik" component={Statistik} />
-
+  
+  <Switch>
+    <Route exact path="/" component={Forside} />
+    <Route exact path="/userdemo" component={ForsideTo} />
+    <Route exact path="/chat" component={Chatsite} />
+    <Route path="/founder/useradmin/:id" component={UserAdmin}/>
+    <Route exact path="/founder/statistik" component={Statistik} />
+    <Route exact path="/founder/creatuser" component={CreatUserFromAdmin} />
+    <Route exact path="/founder/brugerprofil" component={BrugerProfil} />
+    <Route exact path="/statistik" component={Statistik} />
+    <Route exact path="/logout/" component={BrugerProfil} />
+  </Switch>
+  
 </Router>
 )
 }
