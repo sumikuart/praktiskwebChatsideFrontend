@@ -110,16 +110,17 @@ saveChangesHandler = (e) =>{
 e.preventDefault();
 
 
-const userChangesObj = {
-user_name: this.state.user_name,
-user_mail: this.state.user_mail,
-user_password: this.state.user_password,
-user_type:this.state.user_type,
-user_note: this.state.user_note,
-user_timeout:this.state.user_timeout,
-user_timeout_length:this.state.user_timeout_length,
-user_banned: this.state.user_banned,
-user_verified: this.state.user_verified
+    const userChangesObj = {
+        user_name: this.state.user_name,
+        user_mail: this.state.user_mail,
+        user_password: this.state.user_password,
+        user_type:this.state.user_type,
+        user_note: this.state.user_note,
+        user_timeout:this.state.user_timeout, 
+        user_timeout_length:this.state.user_timeout_length,
+        user_banned: this.state.user_banned,
+        user_verified: this.state.user_verified,
+        user_online:this.state.user_online
 
 
 }
@@ -190,9 +191,25 @@ this.setState({
 confirm_hide:true,
 confirm_name: 'godkende'
 
-})
+    if(!this.state.disable_function){
+
+        if(this.state.user_verified){
+            this.setState({
+                confirm_hide:true,
+                confirm_name: 'fjerne godkendelse'
+        
+            })
+        } else {
+            this.setState({
+                confirm_hide:true,
+                confirm_name: 'godkende'
+        
+            })
+    
+        }
 
 }
+
 
 }
 
@@ -212,24 +229,50 @@ this.setState({
 confirm_hide:true,
 confirm_name: 'banned'
 
+<<<<<<< HEAD
 })
+=======
+    if(!this.state.disable_function){
+    if(this.state.user_banned){
+        this.setState({
+            confirm_hide:true,
+            confirm_name: 'Unban'
+    
+        })
+    } else {
+        this.setState({
+            confirm_hide:true,
+            confirm_name: 'banned'
+    
+        })
+>>>>>>> 9ab947f0943e99f6b8f1baa2c283654727cde3bd
 
 }
 
-
+    }
 }
 
 startHandelSlet = (e) =>{
 e.preventDefault();
 
 
+<<<<<<< HEAD
 this.setState({
 confirm_hide:true,
 confirm_name: 'slette'
 })
+=======
+    if(!this.state.disable_function){
+        this.setState({
+            confirm_hide:true,
+            confirm_name: 'slette'
+    })
+>>>>>>> 9ab947f0943e99f6b8f1baa2c283654727cde3bd
+}
 }
 
 handelGodkend = (e) =>{
+<<<<<<< HEAD
 if(this.state.user_verified){
 this.setState({
 user_verified: false,
@@ -241,6 +284,21 @@ user_verified: true,
 confirm_hide:false
 })
 }
+=======
+
+
+    if(this.state.user_verified){
+        this.setState({
+            user_verified: false,
+            confirm_hide:false
+        })
+    } else {
+        this.setState({
+            user_verified: true,
+            confirm_hide:false
+        })
+    }
+>>>>>>> 9ab947f0943e99f6b8f1baa2c283654727cde3bd
 }
 
 handelSlet =(e)=>{
@@ -248,6 +306,7 @@ handelSlet =(e)=>{
 axios.delete('http://localhost:4040/delete/'+this.state.user_id)
 .then( res => console.log(res.data))
 
+<<<<<<< HEAD
 this.setState({
 confirm_hide:false,
 
@@ -256,6 +315,14 @@ user_mail:'',
 user_password: '',
 user_type:this.state.user_type,
 user_note: ''
+=======
+        user_name:'User DELETED',
+        user_mail:'',
+        user_password: '',
+        user_type:this.state.user_type,
+        user_note: '',
+        disable_function:true
+>>>>>>> 9ab947f0943e99f6b8f1baa2c283654727cde3bd
 
 
 })
@@ -282,9 +349,17 @@ confirm_hide:false
 startHandelTimeout = (e) => {
 e.preventDefault();
 
+<<<<<<< HEAD
 this.setState({
 timeout_hide: true
 })
+=======
+    if(!this.state.disable_function){
+    this.setState({
+        timeout_hide: true
+    })
+>>>>>>> 9ab947f0943e99f6b8f1baa2c283654727cde3bd
+}
 }
 
 onClickHandlerTimeBox = (e) =>{
@@ -414,8 +489,14 @@ return (
                     <label>Timeout:</label>
 
                     <div>
+<<<<<<< HEAD
 
                         {this.state.timeleft}
+=======
+                        {/* <p className="timeputP">start:{this.state.user_timeout} slut: {this.state.user_timeout_length} timeleft: {this.state.timeleft}</p> */}
+{/* 
+                        {this.state.timeleft} */}
+>>>>>>> 9ab947f0943e99f6b8f1baa2c283654727cde3bd
                     </div>
                 </div>
 
@@ -447,8 +528,15 @@ return (
             <input type="submit" value="Ban Bruger" />
         </form>
 
+<<<<<<< HEAD
         <form className="profilknap" onSubmit={this.startHandelTimeout}>
             <input type="submit" value="Timeout Bruger" />
+=======
+
+ 
+        <form className="profilknap" onSubmit={this.startHandelTimeout}>  
+            <input type="submit" value="Timeout Bruger"/>
+>>>>>>> 9ab947f0943e99f6b8f1baa2c283654727cde3bd
         </form>
 
         <form className="profilknap" onSubmit={this.startHandelSlet}>
